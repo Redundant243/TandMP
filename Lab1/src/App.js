@@ -2,10 +2,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import React from "react";
 import Items from "./components/Items";
+import Categories from "./components/Categories";
 class App extends React.Component{
     constructor(props) {
         super(props);
         this.state={
+            currentItems: [],
             items: [
                 {
                     id: 1,
@@ -18,7 +20,7 @@ class App extends React.Component{
                     id: 3,
                     title: 'Lab3',
                     desc: '3 lab',
-                    category: 'PE',
+                    category: 'Physics',
                     price: '10'
                 },
                 {
@@ -37,15 +39,31 @@ class App extends React.Component{
                 }
             ]
         }
+        this.state.currentItems = this.state.items
+        this.chooseCategory = this.chooseCategory.bind(this)
     }
     render() {
     return (
         <div className={'wrapper'}>
             <Header />
-            <Items items={this.state.items} />
+            <Categories chooseCategory={this.chooseCategory}/>
+            <br/>
+            <Items items={this.state.currentItems} />
             <Footer />
         </div>
-    );}
+    );
+    }
+
+    chooseCategory(category){
+        if(category === 'All')
+        {
+            this.setState({currentItems: this.state.items})
+            return
+        }
+        this.setState({
+            currentItems: this.state.items.filter(el => el.category === category)
+        })
+    }
 }
 
 export default App;

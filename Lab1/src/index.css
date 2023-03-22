@@ -1,3 +1,4 @@
+/*
 body{
   background-color: bisque;
   color: chocolate;
@@ -85,4 +86,142 @@ main .item img {
 footer{
   text-align: center;
   margin-top: 100px;
+}*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.choiceList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categories{
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  border: 3px solid #66CCFF;
+  margin: 20px 10px 0 10px;
+  padding: 10px;
+
+  font-size: 30px;
+}
+
+.styled-select {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+  
+  overflow: hidden;
+  position: relative;
+}
+.styled-select, .styled-select select { width: 240px;}
+select:focus { outline: none; }
+.styled-select select {
+  height: 34px;
+  padding: 5px 0 5px 5px;
+  background: transparent;
+  border: none;
+}
+
+.searchPage{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px 150px;
+  margin-top: 30px;
+}
+
+.showcase{
+  border-radius: 20px;
+  margin: 30px 0 10px 0;
+  min-height: 50px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 16px -10px #000000 inset;
+}
+
+.product{
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3px;
+}
+
+.product:hover{
+  background-color: #FFCC66;
+  border-radius: 6px;
+  margin-bottom: 3px;
+}
+
+.productChoice{
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #66CCFF;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+}
+
+.buyImg{
+  display: none;
+  position: absolute;
+  right: 5px;
+}
+
+.product:hover .buyImg{
+  display:block;
+}
+
+.ButSend{
+  width: 200px;
+  height: 60px;
+
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+
+  border: 2px solid #CCCCCC;
+  border-radius: 6px;
+}
+
+.ButSend:hover{
+  background-color: #e2e2e2b8;
+}
+
+.title{
+  font-size: 30px;
+  margin-left: 10px;
+  font-family: fantasy;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.search input {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: whitesmoke;
+  color: #333333;
 }
